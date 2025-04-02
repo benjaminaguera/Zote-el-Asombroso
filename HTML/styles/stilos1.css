@@ -22,13 +22,45 @@ div.title{
     padding: 4px;
     background: red;
     z-index: 0;
-
 }
 .titleFlex{
     width: 35%;
     height: 80%;
-    display: flex;
+    display: inline-flex;
+    text-align: center;
+    align-content: center;
     flex-direction: row;
     align-items: center;
     z-index: 1;
+}
+.rowFlex{
+    padding-inline: 60px;
+    color: white;
+    width: 35%;
+    height: 80%;
+    display: inline-flex;
+    grid-row: inherit;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+.image{
+    display: inline-block;
+    width: 60%;
+    height: 60%;
+    background-image: url(Images/image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.sideflex{
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    overflow-y: auto;
 }
