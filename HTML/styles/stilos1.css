@@ -1,0 +1,34 @@
+h1.title{
+    text-align: center;
+    align-items: center;
+    height: 200px;
+    font-size: 30px;
+    background: linear-gradient(purple, black);
+}
+div.title{
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    width: 60%;
+    height: 40px;
+    background: purple;
+    color: white;
+}
+.box{
+    display: inline-block;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    padding: 4px;
+    background: red;
+    z-index: 0;
+
+}
+.titleFlex{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
