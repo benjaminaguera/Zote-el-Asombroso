@@ -1,25 +1,18 @@
 h1.title{
     text-align: center;
     align-items: center;
-    height: 200px;
+    padding-bottom: 6px;
     font-size: 30px;
     background: linear-gradient(purple, black);
 }
 div.title{
     display: inline-block;
+    font-size: 150%;
     position: relative;
     top: 20px;
     width: 60%;
-    height: 40px;
     background: purple;
     color: white;
-}
-.box{
-    display: inline-block;
-    right: 10px;
-    top: 10px;
-    padding: 4px;
-    z-index: 0;
 }
 .titleFlex{
     width: 35%;
@@ -33,9 +26,9 @@ div.title{
 }
 .rowFlex{
     padding-inline: 60px;
+    padding-top: 10px;
     color: white;
     width: 50%;
-    height: 300px;
     display: inline-flex;
     grid-row: inherit;
     align-content: center;
@@ -43,21 +36,73 @@ div.title{
     align-items: center;
     z-index: 1;
 }
+.columnFlex{
+    padding-inline: 20px;
+    padding-top: 10px;
+    color: white;
+    width: 500px;
+    display: inline-flex;
+    grid-row: inherit;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
 .image{
     display: inline-block;
-    width: 200px;
-    height: 300px;
+    width: 220px;
+    height: 330px;
     background-image: url('Images/zote wapo.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
 }
 .sideflex{
-    position: fixed;
-    right: 10%;
-    top: 10%;
-    display: flex;
+    position: sticky;
+    width: 200px;
+    height: 90vh;
+    top: 80px;
+    right: 66px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+
+.row{
+    padding-top: 10px;
+    margin-inline: 2.5%;
+    width: 95%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+.donatorBox{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+}
+
+.infoBoxFlex{
+    padding-right: 100px;
+    padding-top: 10px;
+    color: white;
+    width: 1000px;
+    display: inline-flex;
+    grid-row: inherit;
+    align-content: center;
     flex-direction: column;
-    align-items: right;
-    overflow-y: auto;
+    align-items: center;
+    z-index: 1;
+}
+
+#fontTitle{
+    font-size: 80%;
+    text-align: left;
+    padding: 40px;
 }
