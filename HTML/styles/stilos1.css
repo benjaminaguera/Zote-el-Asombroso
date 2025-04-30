@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 h1.title{
     text-align: center;
     align-items: center;
@@ -9,13 +13,15 @@ h1.title{
 }
 div.title{
     display: inline-block;
+    width: 800px;
+    height: 250px;
     font-size: 150%;
     position: relative;
     top: 20px;
     width: 60%;
-    background: rgba(128, 0, 128, 0.5);
-    color: white;
     margin-bottom: 10px;
+    background-image: url(Images/ZoteTheAlmighty.png);
+    background-size: 100% 100%;
 }
 .titleFlex{
     width: 35%;
@@ -28,10 +34,9 @@ div.title{
     z-index: 1;
 }
 .rowFlex{
-    padding-inline: 60px;
     margin-top: 10px;
     color: white;
-    width: 50%;
+    width: 70%;
     display: inline-flex;
     grid-row: inherit;
     align-content: center;
@@ -40,21 +45,18 @@ div.title{
     z-index: 1;
 }
 .columnFlex{
-    padding-inline: 20px;
-    padding-top: 10px;
+    padding: 10px;
     color: white;
-    width: 500px;
+    width: 800px;
     display: inline-flex;
     grid-row: inherit;
-    align-content: center;
     flex-direction: column;
-    align-items: center;
     z-index: 1;
 }
 .image{
     display: inline-block;
-    width: 220px;
-    height: 330px;
+    width: 280px;
+    height: 380px;
     background-image: url('Images/zote wapo.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -62,13 +64,13 @@ div.title{
 }
 
 .image:hover{
-    box-shadow: 0 0 30px mediumpurple;
+    box-shadow: 0 0 70px mediumpurple;
 }
 .sideflex{
     position: sticky;
     width: 20%;
     height: 90vh;
-    top: 20px;
+    top: 100px;
     right: 66px;
     overflow: hidden;
     overflow-y: scroll;
@@ -157,16 +159,37 @@ div.title{
 .infoBox{
     color: white;
     background: mediumpurple;
-    width: 90%;
-    padding-inline: 5%;
+    width: 95%;
+    padding-inline: 2.5%;
     margin-bottom: 10px;
     border: 3px solid rgb(107, 23, 128);
     border-radius: 20px;
     height: 400px;
 }
 
+.infoRow{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.buttonBar{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 10;
+}
+
 #fontTitle{
-    font-size: 80%;
+    font-size: 120%;
     text-align: left;
     padding: 40px;
+    text-shadow: 0 0 20px rgb(255, 217, 255);
 }
