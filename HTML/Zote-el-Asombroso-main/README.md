@@ -1,1 +1,0 @@
-# Zote-el-Asombroso
