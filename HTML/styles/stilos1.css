@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    scrollbar-color: #40007c #2d0047;
 }
 
 h1.title{
@@ -156,35 +157,95 @@ div.title{
     z-index: 1;
 }
 
-.infoBox{
+.infoBox {
+    position: relative;
     color: white;
-    background: mediumpurple;
+    background: #490061;
     width: 95%;
     padding-inline: 2.5%;
     margin-bottom: 10px;
     border: 3px solid rgb(107, 23, 128);
     border-radius: 20px;
-    height: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.4s ease;
 }
 
-.infoRow{
+.infoBox.expanded {
+    max-height: 2000px;
+}
+
+
+.infoBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #e8adff;
+    background: linear-gradient(0deg, rgba(232, 173, 255, 1) 0%, rgba(232, 173, 255, 0.48) 7%, rgba(232, 173, 255, 0) 21%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.infoBox > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.infoBox:hover{
+    border: 3px solid rgb(214, 63, 252);
+    box-shadow:  0 0 70px rgb(255, 190, 255);
+}
+
+
+.infoRow {
     margin: 0;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
-
+    z-index: 0;
 }
 
-.buttonBar{
+
+.infoImg{
+    display: inline-block;
+    width: 60%;
+    height: 60%;
+}
+
+.buttonBar {
+    display: flex;
     position: sticky;
     top: 0;
     right: 0;
     width: 100%;
-    height: 100px;
-    background-color: black;
-    opacity: 0.5;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5); /* negro con 50% de opacidad */
     z-index: 10;
+    justify-content: center;
+}
+
+button {
+    color: white;
+    width: 20%;
+    background: #555;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    opacity: 1.0;
+}
+
+button:hover {
+    background: #111;
+    color: #ffffff;
 }
 
 #fontTitle{
@@ -193,3 +254,19 @@ div.title{
     padding: 40px;
     text-shadow: 0 0 20px rgb(255, 217, 255);
 }
+
+.expandable {
+    height: 100px;
+    background-color: #6a0dad;
+    color: white;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.expandable.expanded {
+    height: 300px; /* o auto si el contenido lo define */
+}
+
