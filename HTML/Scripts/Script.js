@@ -10,7 +10,7 @@ document.querySelectorAll('.infoBox').forEach(box => {
 function scrollToHeader(headerId) {
     const target = document.getElementById(headerId);
     if (target) {
-        const yOffset = -70; // altura de la barra sticky
+        const yOffset = -90; // altura de la barra sticky
         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
     }
