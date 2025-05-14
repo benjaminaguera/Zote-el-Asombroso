@@ -1,0 +1,428 @@
+@font-face {
+    font-family: Zote-Font;
+    src: url(Trajan-Pro-Regular.ttf);
+}
+
+@font-face {
+    font-family: Zote-Font2;
+    src: url(zote.ttf);
+}
+
+.music{
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: #5800aa #2d0047;
+    font-family: Zote-Font, serif;
+}
+
+h1.title{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 6px;
+    font-size: 30px;
+    background-image: url("Images/Fondo sin titulo.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+div.title{
+    display: inline-block;
+    width: 60%;
+    height: 350px;
+    font-size: 150%;
+    position: relative;
+    top: 20px;
+    width: 60%;
+    margin-bottom: 10px;
+    background-image: url(Images/ZoteTheAlmighty.png);
+    background-size: 100% 100%;
+}
+.titleFlex{
+    width: 35%;
+    height: 80%;
+    display: inline-flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+.rowFlex{
+    margin-top: 10px;
+    color: white;
+    width: 70%;
+    display: inline-flex;
+    grid-row: inherit;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+}
+.columnFlex{
+    padding: 10px;
+    color: white;
+    width: 800px;
+    display: inline-flex;
+    grid-row: inherit;
+    flex-direction: column;
+    z-index: 1;
+}
+.image{
+    display: inline-block;
+    width: 280px;
+    height: 380px;
+    background-image: url('Images/zote wapo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.image:hover{
+    box-shadow: 0 0 70px mediumpurple;
+}
+.sideflex{
+    position: sticky;
+    width: 15%;
+    height: 90vh;
+    top: 90px;
+    right: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 60px;
+    padding-top: 15px;
+    font-family: Zote-Font2, serif;
+}
+
+.row{
+    padding-top: 10px;
+    padding-inline: 1.5%;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    background: radial-gradient(purple, black);
+}
+
+.donatorBox{
+    display: inline-block;
+    margin-block: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    width: 80%;
+    height: auto;
+}
+
+.donadorRango{
+    margin: 0 0 3px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 25px;
+    height: 30%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+[data-attr="gold"]{
+    background: url("Images/Textura_oro.jpg");
+    color: #fff168;
+    border: 3px solid rgb(152, 142, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(255, 244, 108);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+[data-attr="gold"]:hover{
+    text-shadow: 0 0 10px #fdf26b;
+    border: 3px solid rgb(255, 237, 0);
+    box-shadow: 0 0 25px rgb(255, 244, 108);
+}
+
+[data-attr="silver"]{
+    background: url("Images/Textura_plata.jpg");
+    color: #d5d5d5;
+    border: 3px solid rgb(117, 117, 117);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(191, 191, 191);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+[data-attr="silver"]:hover{
+    text-shadow: 0 0 10px #d3d3d3;
+    border: 3px solid rgb(174, 174, 174);
+    box-shadow: 0 0 25px rgb(209, 209, 209);
+}
+
+[data-attr="bronce"]{
+    background: url("Images/Textura_bronce.jpg");
+    color: #ea5f00;
+    border: 3px solid rgb(122, 43, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(255, 125, 38);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+[data-attr="bronce"]:hover{
+    text-shadow: 0 0 10px #e85e00;
+    border: 3px solid rgb(181, 65, 0);
+    box-shadow: 0 0 25px rgb(253, 124, 38);
+}
+
+[data-attr="oniric"]{
+    color: #004b81;
+    border: 3px solid rgb(0, 12, 21);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(0, 44, 76);
+    background: url("Images/Textura_onirico.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+[data-attr="oniric"]:hover{
+    color: #e1479a;
+    text-shadow: 0 0 10px #df5aa2;
+    border: 3px solid rgb(163, 45, 112);
+    box-shadow: 0 0 25px rgb(117, 49, 87);
+}
+
+.donadorRow{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.fotoDonador{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.textoRow{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.textoDonador{
+    margin: 0 0 5px;
+    font-size: 15px;
+
+}
+
+.infoBoxFlex{
+    margin-inline: 10%;
+    padding-top: 10px;
+    color: white;
+    width: 60%;
+    display: inline-flex;
+    grid-row: inherit;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.infoBox {
+    position: relative;
+    color: white;
+    background: #490061;
+    width: 95%;
+    padding-inline: 2.5%;
+    margin-bottom: 10px;
+    border: 3px solid rgb(107, 23, 128);
+    border-radius: 20px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: max-height 1.5s ease;
+}
+
+.infoBox.expanded {
+    max-height: 4000px;
+}
+
+
+.infoBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #e8adff;
+    background: linear-gradient(0deg, rgba(232, 173, 255, 1) 0%, rgba(232, 173, 255, 0.48) 30px, rgba(232, 173, 255, 0) 120px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.infoBox > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.infoBox:hover{
+    border: 3px solid rgb(214, 63, 252);
+    box-shadow:  0 0 70px rgb(255, 190, 255);
+}
+
+
+.infoRow {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+    padding-bottom: 20px;
+}
+
+.infoImg{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.metasRow{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recompensas{
+    display: flex;
+    background: #ff75e6;
+    background: linear-gradient(90deg, rgb(255, 214, 245) 0%, rgb(255, 255, 255) 80%);
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    font-size: 40px;
+    text-align: left;
+    border-radius: 10px;
+    flex-direction: row;
+    margin-bottom: 30px;
+    z-index: 0;
+}
+
+.recompensastext{
+    width: 80%; 
+    display: flex; 
+    align-items: center;
+    color: black;
+    text-shadow:  0px 0px 10px rgb(10, 0, 35);
+}
+
+.StretchGoal{
+    display: inline-block;
+    background-color: #7e7e7e;
+    padding-block: 5px;
+    margin-block: 3px;
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.historiaBox{
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Miembro{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-block: 20px;
+    width: 85%;
+    max-height: 200px;
+    background: url("Images/marco.png");
+    background-size: 100% 100%;
+    justify-content: left;
+    padding: 5%;
+    z-index: 0;
+}
+
+.miembroText{
+    color: white;
+    font-size: 25px;
+    width: 75%;
+    margin-left: 5%;
+}
+
+.imgBottom{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.miembroImg{
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50%;
+    border:  3px solid rgb(0, 0, 0);
+}
+
+.buttonBar {
+    display: flex;
+    padding-block: 10px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    justify-content: center;
+}
+
+
+button {
+    color: white;
+    width: 20%;
+    background: radial-gradient(circle, rgb(189, 189, 189) 0%, rgba(143, 143, 143, 1) 100%);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Zote-Font, serif;
+    border-radius: 6px;
+    opacity: 1.0;
+}
+
+button:hover {
+    background: radial-gradient(circle, rgba(244, 177, 250, 1) 0%, rgba(166, 93, 166, 1) 100%);
+    color: #ffffff;
+    font-size: 25px;
+}
+
+#musicButtom{
+    color: white;
+    width: auto;
+    background: radial-gradient(circle, rgb(220, 220, 220) 0%, rgb(143, 143, 143) 100%);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Zote-Font, serif;
+    border-radius: 6px;
+    opacity: 1.0;
+}
+
+#musicButtom.playing {
+    background: radial-gradient(circle, rgb(189, 92, 255) 0%, rgb(108, 52, 145) 100%);
+}
+
+
+#fontTitle{
+    font-size: 120%;
+    text-align: left;
+    padding: 40px;
+    text-shadow: 0 0 20px rgb(255, 217, 255);
+}
+
+
