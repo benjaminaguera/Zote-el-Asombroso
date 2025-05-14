@@ -7,7 +7,11 @@
         <script src="HTML/Scripts/Script.js" defer></script>
     </head>
     <body style="background-color: black; margin: 0;">
-        <h1 class = "title" style= "margin: 0;">
+    <audio id="bgMusic">
+        <source src="HTML/Audio/Truth, Beauty and Hatred (Hollow Knight： Hidden Dreams).mp3" type="audio/mp3" />
+    </audio>
+
+    <h1 class = "title" style= "margin: 0;">
             <div class = "title"></div>
             <div class = "rowFlex">
                 <div class="image"></div>
@@ -17,9 +21,16 @@
                 </div>
             </div>
         </h1>
-        <div class = "buttonBar" id="buttonBar"></div>
+        <div class = "buttonBar" id="buttonBar">
+            <button id="musicButtom" onclick="playMusic()">Play Music</button>
+        </div>
         <div class="row">
             <div class="infoBoxFlex">
+                <section id="Vídeo" style= "margin-bottom: 10px;">
+                    <video width="auto" height="auto" controls style="border: #e8adff solid 3px; border-radius: 30px;">
+                        <source src="Assets/areYouSure.mp4"  type="video/mp4"/>
+                    </video>
+                </section>
                 <section class = infoBox id = "Metas">
                     <img src="HTML/styles/Images/Metas.png" class="infoImg" style="height: 60%; width: 60%;">
                     <div class = "infoRow">
@@ -104,7 +115,7 @@
                     </div>
                     <div class="recompensas">
                         <div class="recompensastext">30€ - Acceso al Beta Testing</div>
-                        <img src="HTML/image.jpg" width="200px" height="200px">
+                        <img src="HTML/styles/Images/Caratula_BETA_1.jpg" width="150px" height="220px">
                     </div>
                     <div class="recompensas">
                         <div class="recompensastext">35€ - Camiseta de Zote</div>
@@ -116,7 +127,7 @@
                     </div>
                     <div class="recompensas">
                         <div class="recompensastext">60€ - Dakimakura de Zote</div>
-                        <img src="HTML/image.jpg" width="200px" height="200px">
+                        <img src="HTML/styles/Images/Dakimakura_zote.png" width="200px" height="300px">
                     </div>
                     <div style="font-size: 30px; display: inline-block; margin-bottom: 20px; background-color: yellowgreen; border-radius: 3px; padding: 5px;">Las recompensas se acumulan e incluyen el precio de envío</div>
                 </section>
@@ -131,14 +142,120 @@
                     <img src="HTML/styles/Images/Giff_2.gif" width="692" height="388" style="margin-block: 10px;">
                     <div class="historiaBox">Zote conoció criaturas olvidadas por la historia y tuvo que enfrentarse a ellas para salvar a los bichos de una antigua amenaza...</div>
                     <img src="HTML/styles/Images/danger.gif" width="692" height="388" style="margin-block: 10px;">
-                    <div class="historiaBox">Supera las muchas adversidades y trampas que le deparan a Zote en este increíble aventura</div>
+                    <div class="historiaBox">Supera las muchas adversidades y trampas que le deparan a Zote en esta increíble aventura</div>
                     <img src="HTML/styles/Images/zote-webbed.webp" width="547" height="492" style="margin-bottom: 30px; z-index: 0">
                 </section>
-                <section class = infoBox id = "Gameplay">Hola</section>
-
+                <section class = infoBox id = "Equipo">
+                    <img src="HTML/styles/Images/Equipo.png" class="infoImg" style="height: 180px; width: 60%;">
+                    <div class="Miembro">
+                        <div class="miembroText">Hola holita</div>
+                        <div>
+                            <img src="HTML/image.jpg" width="150px" height="150px" class="miembroImg">
+                            <div class="imgBottom">Benjamin</div>
+                        </div>
+                    </div>
+                    <div class="Miembro">
+                        <div>
+                            <img src="HTML/image.jpg" width="150px" height="150px" class="miembroImg">
+                            <div class="imgBottom">Marcos</div>
+                        </div>
+                        <div class="miembroText">Hola holita</div>
+                    </div>
+                    <div class="Miembro">
+                        <div class="miembroText">Hola holita</div>
+                        <div>
+                            <img src="HTML/image.jpg" width="150px" height="150px" class="miembroImg">
+                            <div class="imgBottom">Dani</div>
+                        </div>
+                    </div>
+                    <div class="Miembro">
+                        <div>
+                            <img src="HTML/image.jpg" width="150px" height="150px" class="miembroImg">
+                            <div class="imgBottom">Daniel</div>
+                        </div>
+                        <div class="miembroText">Hola holita</div>
+                    </div>
+                    <div class="Miembro" style="margin-bottom: 80px;">
+                        <div class="miembroText">Hola holita</div>
+                        <div>
+                            <img src="HTML/image.jpg" width="150px" height="150px" class="miembroImg">
+                            <div class="imgBottom">Jorge</div>
+                        </div>
+                    </div>
+                </section>
 
             </div>
             <div class="sideflex">
+                <div class="donatorBox"  data-attr="silver">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="gold">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="bronce">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="oniric">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="silver">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="bronce">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donatorBox"  data-attr="bronce">
+                    <p class="donadorRango">Discípulo de Zote</p>
+                    <div class="donadorRow">
+                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
+                        <div class = "textoRow">
+                            <p class="textoDonador">Hola</p>
+                            <p class="textoDonador">3€</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="donatorBox"  data-attr="silver">
                     <p class="donadorRango">Discípulo de Zote</p>
                     <div class="donadorRow">
@@ -189,7 +306,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="donatorBox"  data-attr="gold">
+                <div class="donatorBox"  data-attr="silver">
                     <p class="donadorRango">Discípulo de Zote</p>
                     <div class="donadorRow">
                         <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
@@ -199,17 +316,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="donatorBox"  data-attr="gold">
-                    <p class="donadorRango">Discípulo de Zote</p>
-                    <div class="donadorRow">
-                        <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
-                        <div class = "textoRow">
-                            <p class="textoDonador">Hola</p>
-                            <p class="textoDonador">3€</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="donatorBox"  data-attr="gold">
+                <div class="donatorBox"  data-attr="bronce">
                     <p class="donadorRango">Discípulo de Zote</p>
                     <div class="donadorRow">
                         <img class = "fotoDonador" src="HTML/styles/Images/image.jpg" />
