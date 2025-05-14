@@ -23,6 +23,30 @@ headers.forEach(header => {
     navbar.appendChild(button);
 });
 
+function actualizarRangosDonadores() {
+    const rangos = {
+        silver: "Seguidor de Zote",
+        gold: "Discípulo de Zote",
+        bronce: "Aprendiz de Zote",
+        oniric: "Soñador de Zote"
+    };
+
+    const donadores = document.querySelectorAll('.donatorBox');
+
+    donadores.forEach(donador => {
+        const tipo = donador.getAttribute('data-attr');
+        const rangoTexto = rangos[tipo];
+        if (rangoTexto) {
+            const rangoElemento = donador.querySelector('.donadorRango');
+            if (rangoElemento) {
+                rangoElemento.textContent = rangoTexto;
+            }
+        }
+    });
+}
+document.addEventListener("DOMContentLoaded", actualizarRangosDonadores);
+
+
 
 
 
