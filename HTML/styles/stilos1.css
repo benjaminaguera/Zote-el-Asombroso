@@ -8,6 +8,12 @@
     src: url(zote.ttf);
 }
 
+.music{
+    display: block;
+    top: 0;
+    right: 0;
+}
+
 html{
     scroll-behavior: smooth;
     scrollbar-color: #5800aa #2d0047;
@@ -82,8 +88,8 @@ div.title{
     position: sticky;
     width: 15%;
     height: 90vh;
-    top: 100px;
-    right: 0px;
+    top: 90px;
+    right: 0;
     overflow: hidden;
     overflow-y: scroll;
     padding-left: 60px;
@@ -325,6 +331,40 @@ div.title{
     margin-top: 20px;
 }
 
+.Miembro{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-block: 20px;
+    width: 85%;
+    max-height: 200px;
+    background: url("Images/marco.png");
+    background-size: 100% 100%;
+    justify-content: left;
+    padding: 5%;
+    z-index: 0;
+}
+
+.miembroText{
+    color: white;
+    font-size: 25px;
+    width: 75%;
+    margin-left: 5%;
+}
+
+.imgBottom{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.miembroImg{
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50%;
+    border:  3px solid rgb(0, 0, 0);
+}
+
 .buttonBar {
     display: flex;
     padding-block: 10px;
@@ -358,6 +398,25 @@ button:hover {
     color: #ffffff;
     font-size: 25px;
 }
+
+#musicButtom{
+    color: white;
+    width: auto;
+    background: radial-gradient(circle, rgb(220, 220, 220) 0%, rgb(143, 143, 143) 100%);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Zote-Font, serif;
+    border-radius: 6px;
+    opacity: 1.0;
+}
+
+#musicButtom.playing {
+    background: radial-gradient(circle, rgb(189, 92, 255) 0%, rgb(108, 52, 145) 100%);
+}
+
 
 #fontTitle{
     font-size: 120%;
