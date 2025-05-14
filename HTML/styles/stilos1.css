@@ -401,7 +401,7 @@ button:hover {
 
 #musicButtom{
     color: white;
-    width: auto;
+    width: 10%  ;
     background: radial-gradient(circle, rgb(220, 220, 220) 0%, rgb(143, 143, 143) 100%);
     border: none;
     padding: 10px 20px;
@@ -413,8 +413,18 @@ button:hover {
     opacity: 1.0;
 }
 
+#musicButtom:hover{
+    background: radial-gradient(circle, rgb(168, 168, 168) 0%, rgb(101, 101, 101) 100%);
+    font-size: 150%;
+}
+
 #musicButtom.playing {
     background: radial-gradient(circle, rgb(189, 92, 255) 0%, rgb(108, 52, 145) 100%);
+}
+
+#musicButtom.playing:hover {
+    background: radial-gradient(circle, rgb(153, 74, 209) 0%, rgb(84, 40, 113) 100%);
+    font-size: 150%;
 }
 
 
