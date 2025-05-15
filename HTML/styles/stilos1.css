@@ -461,7 +461,9 @@ button:hover {
 }
 
 @media (max-width: 768px) and (hover: none) and (pointer: coarse){
-
+    .rowFlex{
+        width: 90%;
+    }
     .textoDonador{
         font-size: 25px;
     }
@@ -492,7 +494,7 @@ button:hover {
     }
 
     .sideflex{
-        padding-left: 30px;
+        padding-left: 10%;
         width: 35%;
 
     }
