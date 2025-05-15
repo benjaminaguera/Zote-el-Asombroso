@@ -19,6 +19,10 @@ html{
     scrollbar-color: #5800aa #2d0047;
     font-family: Zote-Font, serif;
 }
+body {
+    overflow-x: hidden;
+}
+
 
 h1.title{
     text-align: center;
@@ -36,7 +40,6 @@ div.title{
     font-size: 150%;
     position: relative;
     top: 20px;
-    width: 60%;
     margin-bottom: 10px;
     background-image: url(Images/ZoteTheAlmighty.png);
     background-size: 100% 100%;
@@ -65,7 +68,7 @@ div.title{
 .columnFlex{
     padding: 10px;
     color: white;
-    width: 800px;
+    width: 70%;
     display: inline-flex;
     grid-row: inherit;
     flex-direction: column;
@@ -435,6 +438,10 @@ button:hover {
     font-size: 110%;
 }
 
+#espadaZote{
+    width:50%;
+    height:2000px;
+}
 
 #fontTitle{
     font-size: 120%;
@@ -454,8 +461,9 @@ button:hover {
 }
 
 @media (max-width: 768px) and (hover: none) and (pointer: coarse){
+
     .textoDonador{
-        font-size: 35px;
+        font-size: 25px;
     }
     .StretchGoal{
         display: inline-block;
@@ -465,5 +473,70 @@ button:hover {
         border-radius: 10px;
         font-size: 40px;
         text-align: center;
+    }
+    .buttonBar {
+        display: flex;
+        padding-block: 5px;
+        position: sticky;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        justify-content: center;
+    }
+
+    .infoBoxFlex{
+        margin-inline: 0%;
+    }
+
+    .sideflex{
+        padding-left: 30px;
+        width: 35%;
+
+    }
+    button {
+        color: white;
+        width: 20%;
+        background: radial-gradient(circle, rgb(189, 189, 189) 0%, rgba(143, 143, 143, 1) 100%);
+        border: none;
+        padding-inline: 3px;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: Zote-Font, serif;
+        border-radius: 6px;
+        opacity: 1.0;
+    }
+    #musicButtom{
+        font-size: 10px;
+        padding-inline: 2px;
+    }
+    #fontTitle{
+        font-size: 20px;
+        text-align: left;
+        padding: 40px;
+        text-shadow: 0 0 20px rgb(255, 217, 255);
+    }
+    .StretchGoal{
+        width: 100%;
+    }
+    #espadaZote{
+        display:none;
+    }
+    .Miembro{
+        flex-direction:  column;
+        max-height:  2000px;
+        height: auto;
+        justify-content: center;
+        padding-block: 100px;
+    }
+    .miembroText{
+        text-align:  center;
+        width: 100%;
+        margin: 0;
+    }
+    .miembroImg{
+        justify-self: center;
     }
 }
